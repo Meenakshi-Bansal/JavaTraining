@@ -13,6 +13,7 @@ public class Program1 {
 //        obj.triangleType();
 //        obj.sumOfIntegers();
 //        obj.gcd();
+        obj.primeNumber();
 
     }
 
@@ -149,6 +150,47 @@ public class Program1 {
         }
         System.out.println(GCD);
     }
+
+    //You are given a single positive integer, N. You need to find and print whether N is Prime or not.
+    public void primeNumber(){
+        int a = 13;
+        boolean prime = true;
+        for(int i = 2; i<a; i++){
+            if (a%i==0){
+                System.out.println("Number is not prime");
+                prime=false;
+                break;
+            }
+        }
+        if (prime){
+            System.out.println("Number is prime");
+        }
+    }
+
+
+    //You are given a single non-negative integer, N. You need to print all numbers that:
+    //
+    //(i) occur in the range 0 to N (both inclusive)
+    //
+    //(ii) are a part of the fibonacci sequence
+    //
+    //Draw a flowchart for this process
+    //
+    //Note 1: The first two terms of the fibonacci sequence are 0 and 1.
+    //
+    //Note 2: You don't need to submit the problem. Just attempt in your notebook and ask doubts if you need help.
+
+    //You are given a single non-negative integer, N. You need to find out whether N is a part of the fibonacci sequence.
+    //
+    //Print "Yes" if it is and "No" if it's not.
+    //
+    //Draw a flowchart for this process
+    //
+    //Note 1: The first two terms of the fibonacci sequence are 0 and 1.
+    //
+    //
+    //
+    //Note 2: You don't need to submit the problem. Just attempt in your notebook and ask doubts if you need help.
 }
 
 
