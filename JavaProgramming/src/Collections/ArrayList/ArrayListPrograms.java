@@ -1,9 +1,6 @@
 package Collections.ArrayList;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.LinkedHashSet;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class ArrayListPrograms {
@@ -11,8 +8,9 @@ public class ArrayListPrograms {
     public static void main(String[] args){
 
         ArrayListPrograms obj = new ArrayListPrograms();
-        obj.removeDuplicates();
-        obj.compareTwoArrayList();
+        //obj.removeDuplicates();
+        //obj.compareTwoArrayList();
+        obj.reverseArrayList();
 
     }
 
@@ -30,11 +28,14 @@ public class ArrayListPrograms {
         System.out.println(finalvalue);
     }
 
+    //Compare two arrays list and find out the unique elements in both the lists and print the elements
+    //ArrayList<Integer> numbers = new ArrayList<Integer>(Arrays.asList(1,2,13,11,4,5));
+    //ArrayList<Integer> numbers1 = new ArrayList<Integer>(Arrays.asList(1,2,3,4,5,11,17));
+    //Output: [13,3,17]
+
     public void compareTwoArrayList(){
         ArrayList<Integer> numbers = new ArrayList<Integer>(Arrays.asList(1,2,13,11,4,5));
         ArrayList<Integer> numbers1 = new ArrayList<Integer>(Arrays.asList(1,2,3,4,5,11,17));
-
-        //Output: [13,3,17]
 
         //Compare two arrays list and print the common elements in both the lists
         //numbers.retainAll(numbers1);
@@ -53,8 +54,33 @@ public class ArrayListPrograms {
         numbers1.removeAll(copyNumbers);
         System.out.println(numbers1);
 
+
+
         numbers.addAll(numbers1);
         System.out.println(numbers);
     }
+
+    //Reverse Array list
+    //ArrayList<Integer> numbers1 = new ArrayList<Integer>(Arrays.asList(1,2,3,4,5,11,17));
+    //Output: [17,11,5,4,3,2,1]
+
+    public void reverseArrayList(){
+        ArrayList<Integer> numbers = new ArrayList<Integer>(Arrays.asList(1,2,3,4,5,11,17));
+        ArrayList<Integer> reverseList = new ArrayList<Integer>();
+        //numbers.stream().forEach(it -> numbers.size());
+        //Collections.reverse(numbers);
+        //System.out.println(numbers);
+
+        int size = numbers.size();
+        //System.out.println(size);
+
+        for (int i = size-1; i>=0; i--){
+            Integer i1 = numbers.get(i);
+            //int temp = i1;
+            reverseList.add(i1);
+        }
+        System.out.println(reverseList);
+    }
+
 
 }
